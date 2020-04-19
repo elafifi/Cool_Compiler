@@ -126,7 +126,7 @@ class Main inherits IO {
 ```
 ### Output:
 
-![Bad_output](../imgSrc/BadOutput.PNG)
+![Bad_output](Cool_Compiler/imgSrc/BadOutput.PNG)
 
 ## How To Run
 
