@@ -1,4 +1,4 @@
-#Cool Compiler 
+# Cool Compiler 
 
 To design any compiler you should do several steps:
 * Lexical Analysis
@@ -9,20 +9,20 @@ To design any compiler you should do several steps:
 we will introduce these steps one by one
 let's beigin with lexical analysis
 
-##1- Lexical Analyser
-####Lexer purpose: 
+## 1- Lexical Analyser
+#### Lexer purpose: 
 lexing or tokenization is the process of converting a sequence of characters (such as in a computer program or web page) into a sequence of tokens (strings with an assigned and thus identified meaning). A program that performs lexical analysis may be termed a lexer, tokenizer or scanner.
 
-####Component Of My Lexer:
+#### Component Of My Lexer:
 * Cool_compiler contain lexer grammar with Antlr 
 * Lexer_IO to manipulate with Lexer_grammar generated class
 * Main Class to test it 
 
 Examples of Lexer grammar:
-* #####Snapshot 1:
+* ##### Snapshot 1:
 ![snap shot1](../imgSrc/1.PNG)
 
-* #####Snapshot 2:
+* ##### Snapshot 2:
 ![snap shot2](../imgSrc/2.PNG)
 
 #### Input Formate:
