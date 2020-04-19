@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3e6efd34-16ba-4fe2-98f4-977f03f79b61" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1a2os1lQC0BNOQP1FHppq2mNi42" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/The_Lexer-master" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\elafi\IdeaProjects\Afifi_Lexer\imgSrc" />
+      <recent name="C:\Users\elafi\IdeaProjects\Afifi_Lexer\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main (١)">
+    <configuration name="Main (١)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Afifi_Lexer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="Afifi_Lexer" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (١)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (١)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e6efd34-16ba-4fe2-98f4-977f03f79b61" name="Default Changelist" comment="" />
+      <created>1585943252289</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585943252289</updated>
+      <workItem from="1585943272083" duration="16583000" />
+      <workItem from="1586002571741" duration="15966000" />
+      <workItem from="1586035030122" duration="4777000" />
+      <workItem from="1586224305410" duration="597000" />
+      <workItem from="1586377911529" duration="1176000" />
+      <workItem from="1586431878937" duration="4296000" />
+      <workItem from="1586896457916" duration="10333000" />
+      <workItem from="1586910754038" duration="10620000" />
+      <workItem from="1586962801305" duration="520000" />
+      <workItem from="1586974248343" duration="4660000" />
+      <workItem from="1586984868318" duration="13435000" />
+      <workItem from="1587068533952" duration="14594000" />
+      <workItem from="1587222704597" duration="754000" />
+      <workItem from="1587241099608" duration="7474000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Project_Structure" timestamp="1586910677410">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1586910677410" />
+    <state x="451" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586906751762">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="451" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1586906751762" />
+    <state x="432" y="200" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1586033092798">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="432" y="200" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1366.728@0.0.1366.728" timestamp="1586033092798" />
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1586996272844">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586996272844" />
+    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1586033118115">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586033118115" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1587094019533">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587094019533" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1587094019533">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587094019533" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1587094019533">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587094019533" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1587094019533">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587094019533" />
+    <state x="263" y="98" key="IDE.errors.dialog" timestamp="1586909118399">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="263" y="98" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1586909118399" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1586910705393">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586910705393" />
+    <state x="378" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1587241101328">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1587241101328" />
+    <state x="65" y="0" key="new project wizard" timestamp="1586026052443">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1586026052443" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1586910607868">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586910607868" />
+  </component>
+</project>
