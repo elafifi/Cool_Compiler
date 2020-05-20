@@ -1,1 +1,1 @@
-(program (classDefinition class Main inherits IO { (classBody (methodDefinition main ( ) : Int { (expr (value 0)) }) ;) } ;))
+(program (classDefinition class Main { (classBody (methodDefinition main ( ) : Int { (expr (value 0)) }) ;) } ;))

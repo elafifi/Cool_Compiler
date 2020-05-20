@@ -16,7 +16,9 @@ public class Cool_compilerBaseVisitor<T> extends AbstractParseTreeVisitor<T> imp
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitProgram(Cool_compilerParser.ProgramContext ctx) { return visitChildren(ctx); }
+	@Override public T visitProgram(Cool_compilerParser.ProgramContext ctx) {
+		System.out.println("----\n ----- \n"+ctx.getText());
+		return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -30,7 +32,10 @@ public class Cool_compilerBaseVisitor<T> extends AbstractParseTreeVisitor<T> imp
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitClassBody(Cool_compilerParser.ClassBodyContext ctx) { return visitChildren(ctx); }
+	@Override public T visitClassBody(Cool_compilerParser.ClassBodyContext ctx) {
+		System.out.println("----\n ----- \n"+ctx.getText());
+
+		return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

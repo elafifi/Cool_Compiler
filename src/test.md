@@ -85,13 +85,13 @@ some_text
 * Main : java class to test Parser 
 
 Examples for Parser Grammar:
-* #####Snapshot 1:
+* ##### Snapshot 1:
 ![snap shot1](../imgSrc/parserGrammar1.PNG)
 
-* #####Snapshot 2:
+* ##### Snapshot 2:
 ![snap shot2](../imgSrc/parserGrammar2.PNG)
 
-* #####Snapshot 3:
+* ##### Snapshot 3:
 ![snap shot3](../imgSrc/parserGrammar3.PNG)
 
 #### Input: 
@@ -128,16 +128,16 @@ class Main inherits IO {
 
 ![Bad_output](../imgSrc/BadOutput.PNG)
 
-##How To Run
+## How To Run
 
-###Compile the file
+### Compile the file
 
 `javac -cp "( ANTLRPATH HERE )\antlr-4.8-complete.jar;" yourPath/Main.java yourPath/coolLexer.java`
 
-###Run the file with the parameter
+### Run the file with the parameter
 `java -cp "( ANTLRPATH HERE )\antlr.jar;" Main InputFile`
 
-##Test Cases:
+## Test Cases:
 I upload two files one is called `good.cl` doesn't have any errors and compile well 
 
 other file called `bad.cl` have multiple errors and my lexer detect it

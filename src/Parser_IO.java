@@ -1,3 +1,5 @@
+import org.antlr.v4.runtime.Parser;
+import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -48,6 +50,10 @@ public class Parser_IO {
         }catch (IOException e){
             throw new RuntimeException(e);
         }
+    }
+
+    ParseTree getParser() {
+        return (ParseTree)this.coolParser;
     }
 
 }
