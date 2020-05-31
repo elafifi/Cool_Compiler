@@ -20,7 +20,7 @@ lexing or tokenization is the process of converting a sequence of characters (su
 
 Examples of Lexer grammar:
 * ##### Snapshot 1:
-![snap shot1](../imgSrc/1.PNG)
+![snap shot1](src/imgSrc/1.PNG)
 
 * ##### Snapshot 2:
 ![snap shot2](../imgSrc/2.PNG)
