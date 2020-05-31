@@ -1,9 +1,8 @@
 
-import org.antlr.v4.runtime.CommonTokenFactory;
-import org.antlr.v4.runtime.tree.ParseTree;
+import translation.TranslatorHandler;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
-
 public class Main {
 
     public static void main(String[] args) throws IOException {
@@ -14,9 +13,13 @@ public class Main {
         lexer.writeTokens(srcFile + "-lex");
 
         Parser_IO parser = new Parser_IO(lexer);
-        parser.writeCST(srcFile + "-cst");
+        //parser.writeCST(srcFile + "-cst");
 
-        Cool_compilerBaseVisitor<Integer> coolVisitor = new Cool_compilerBaseVisitor();
-        coolVisitor.visit(new Cool_compilerParser(lexer.getTokensStream()).program());
+
+
+        TranslatorHandler.setStream(new FileOutputStream(srcFile + "-TAC"));
+        TranslatorHandler.translate(parser.getParser());
+
+
     }
 }

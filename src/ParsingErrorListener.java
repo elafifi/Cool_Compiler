@@ -10,6 +10,6 @@ public class ParsingErrorListener extends BaseErrorListener {
     @Override
     public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e)
             throws ParseCancellationException {
-        throw new ParseCancellationException("\nline " + line + " : "+ msg);
+        throw new ParseCancellationException("\nline " + line + " : " + charPositionInLine + " " + msg);
     }
 }

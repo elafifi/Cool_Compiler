@@ -1,4 +1,4 @@
-import org.antlr.v4.runtime.Parser;
+import gen.Cool_compilerParser;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.io.BufferedWriter;
@@ -11,6 +11,8 @@ import java.io.IOException;
 public class Parser_IO {
 
     private Cool_compilerParser coolParser;
+    private ParseTree cachedParseTree;
+
 
     /**
      * class constructor used to instantiate object from coolParser and add Error Listener to it.
@@ -19,9 +21,10 @@ public class Parser_IO {
      */
     public Parser_IO(Lexer_IO lexer) {
         coolParser = new Cool_compilerParser(lexer.getTokensStream());
-
         coolParser.removeErrorListeners();
         coolParser.addErrorListener(ParsingErrorListener.parsingErrorListenerObject);
+
+
     }
 
     /**
@@ -52,8 +55,10 @@ public class Parser_IO {
         }
     }
 
-    ParseTree getParser() {
-        return (ParseTree)this.coolParser;
+    public ParseTree getParser() {
+        //System.out.println("---> "+ coolParser.globals().getChildCount());
+        if (cachedParseTree == null) cachedParseTree = coolParser.classDefinition();
+        return cachedParseTree;
     }
 
 }

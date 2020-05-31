@@ -128,6 +128,89 @@ class Main inherits IO {
 
 ![Bad_output](../imgSrc/BadOutput.PNG)
 
+## 3- Code Generation and Semantic Analysis
+There Three ways to implement this stage: 
+1. Listeners
+2. Visitors
+3. Translators
+
+but I use third method to achieve isolation and reliability in my implementation.
+
+all Components to implement CodeGeneration exists in translation Folder
+
+#### Examples: 
+##### GoodInput:
+```
+class Main {
+  a: Int;
+  add(p1Name: Int): String {
+       {
+          while 3<2 then a <- 5*3+4*2 pool;
+       }
+      };
+  };    
+```
+
+##### GoodOutput:
+```
+--=========================
+---------> ClassDefinitionStmt_Start <-----------
+ --=========================
+
+Main: 
+ --=========================
+--> MethodDefinitionStmt_Start <--
+ --=========================
+
+add: 
+ --=========================
+---------> BlockStmt_Start <-----------
+ --=========================
+
+ --=========================
+---------> WhileStmt_Start <-----------
+ --=========================
+
+L٠:
+t٠ := 3 < 2
+IFZ t٠ GOTO L١
+t١ := 5 * 3
+t٢ := 4 * 2
+t٣ := t١ + t٢
+a := t٣
+GOTO L٠
+L١:
+ --=========================
+---------> WhileStmt_End <-----------
+ --=========================
+
+ --=========================
+---------> BlockStmt_End <-----------
+ --=========================
+
+ --=========================
+--> MethodDefinitionStmt_End <--
+ --=========================
+
+ --=========================
+---------> ClassDefinitionStmt_End <-----------
+ --=========================
+
+
+```
+
+##### BadInput:
+```
+class Main {
+  a: Int;
+  add(p1Name: Int): String {
+          case a of b:Int => a <- 5;b:Int => b <- 5;esac
+      };
+  };
+```
+
+##### BadOutput:
+![Bad_output](../imgSrc/BadCodeGenerationOutput.PNG)
 ## How To Run
 
 ### Compile the file

@@ -87,25 +87,219 @@ public interface Cool_compilerListener extends ParseTreeListener {
 	 */
 	void exitActualParamList(Cool_compilerParser.ActualParamListContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link Cool_compilerParser#varDeclaration}.
+	 * Enter a parse tree produced by {@link Cool_compilerParser#varDefinition}.
 	 * @param ctx the parse tree
 	 */
-	void enterVarDeclaration(Cool_compilerParser.VarDeclarationContext ctx);
+	void enterVarDefinition(Cool_compilerParser.VarDefinitionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link Cool_compilerParser#varDeclaration}.
+	 * Exit a parse tree produced by {@link Cool_compilerParser#varDefinition}.
 	 * @param ctx the parse tree
 	 */
-	void exitVarDeclaration(Cool_compilerParser.VarDeclarationContext ctx);
+	void exitVarDefinition(Cool_compilerParser.VarDefinitionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link Cool_compilerParser#expr}.
+	 * Enter a parse tree produced by the {@code new_obj_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpr(Cool_compilerParser.ExprContext ctx);
+	void enterNew_obj_stmt(Cool_compilerParser.New_obj_stmtContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link Cool_compilerParser#expr}.
+	 * Exit a parse tree produced by the {@code new_obj_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpr(Cool_compilerParser.ExprContext ctx);
+	void exitNew_obj_stmt(Cool_compilerParser.New_obj_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code assignment_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssignment_stmt(Cool_compilerParser.Assignment_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code assignment_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssignment_stmt(Cool_compilerParser.Assignment_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code while_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhile_stmt(Cool_compilerParser.While_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code while_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhile_stmt(Cool_compilerParser.While_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code bracExprStmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterBracExprStmt(Cool_compilerParser.BracExprStmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code bracExprStmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitBracExprStmt(Cool_compilerParser.BracExprStmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code valueStmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterValueStmt(Cool_compilerParser.ValueStmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code valueStmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitValueStmt(Cool_compilerParser.ValueStmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code if_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterIf_stmt(Cool_compilerParser.If_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code if_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitIf_stmt(Cool_compilerParser.If_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code case_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterCase_stmt(Cool_compilerParser.Case_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code case_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitCase_stmt(Cool_compilerParser.Case_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code methodCallStmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterMethodCallStmt(Cool_compilerParser.MethodCallStmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code methodCallStmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitMethodCallStmt(Cool_compilerParser.MethodCallStmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code mulDivStmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterMulDivStmt(Cool_compilerParser.MulDivStmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code mulDivStmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitMulDivStmt(Cool_compilerParser.MulDivStmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code not_expr_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterNot_expr_stmt(Cool_compilerParser.Not_expr_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code not_expr_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitNot_expr_stmt(Cool_compilerParser.Not_expr_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code relOpStmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterRelOpStmt(Cool_compilerParser.RelOpStmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code relOpStmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitRelOpStmt(Cool_compilerParser.RelOpStmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code block_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterBlock_stmt(Cool_compilerParser.Block_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code block_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitBlock_stmt(Cool_compilerParser.Block_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code is_void_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterIs_void_stmt(Cool_compilerParser.Is_void_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code is_void_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitIs_void_stmt(Cool_compilerParser.Is_void_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code plusMinusStmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterPlusMinusStmt(Cool_compilerParser.PlusMinusStmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code plusMinusStmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitPlusMinusStmt(Cool_compilerParser.PlusMinusStmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code inv_expr_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterInv_expr_stmt(Cool_compilerParser.Inv_expr_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code inv_expr_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitInv_expr_stmt(Cool_compilerParser.Inv_expr_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code let_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterLet_stmt(Cool_compilerParser.Let_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code let_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitLet_stmt(Cool_compilerParser.Let_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code feature_access_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterFeature_access_stmt(Cool_compilerParser.Feature_access_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code feature_access_stmt}
+	 * labeled alternative in {@link Cool_compilerParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitFeature_access_stmt(Cool_compilerParser.Feature_access_stmtContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link Cool_compilerParser#op}.
 	 * @param ctx the parse tree

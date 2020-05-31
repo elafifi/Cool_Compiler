@@ -1,6 +1,7 @@
+
 grammar Cool_compiler;
 
-program : classDefinition+;
+program : classDefinition*;
 
 classDefinition :
     CLASS TYPE (INHERITS TYPE)? LEFT_CURLY
@@ -8,43 +9,43 @@ classDefinition :
     RIGHT_CURLY SEMICOLUN
     ;
 
-classBody : ((varDeclaration | methodDefinition) SEMICOLUN)*;
+classBody : ((varDefinition | methodDefinition) SEMICOLUN)*;
 
 //=========================== method Rules ===================================
 methodDefinition
                 :
-                ID LEFT_PRANSIS formalParamList* RIGHT_PRANSIS COLUN TYPE LEFT_CURLY
+                ID LEFT_PRANSIS formalParamList RIGHT_PRANSIS COLUN TYPE LEFT_CURLY
                     expr
                 RIGHT_CURLY
                 ;
 
-methodCall : ID LEFT_PRANSIS actualParamList RIGHT_PRANSIS SEMICOLUN;
+methodCall : ID LEFT_PRANSIS actualParamList RIGHT_PRANSIS;
 
-formalParamList: param (COMMA param)*;
+formalParamList: (param (COMMA param)*)*;
 param : ID COLUN TYPE;
-actualParamList : expr (expr COMMA)*;
-//=========================== varDeclaration Rules ===================================
-varDeclaration: ID COLUN TYPE (ASSIGN_OPERATOR expr)?;
+actualParamList : expr (COMMA expr)*;
+//=========================== varDefinition Rules ===================================
+varDefinition: ID COLUN TYPE (ASSIGN_OPERATOR expr)?;
 
 //=========================== expr Rules ===================================
 expr
-    : expr MULDIV expr
-    | expr PLUSMINUS expr
-    | expr op expr
-    | LEFT_PRANSIS expr RIGHT_PRANSIS
-    | value
-    | blockStmt
-    | methodCall
-    | letStmt
-    | whileStmt
-    | ifStmt
-    | assignmentStmt
-    | invExprStmt
-    | notExprStmt
-    | newObjStmt
-    | isvoidStmt
-    | caseStmt
-    | featureAccess =  expr (AT TYPE)? DOT ID (LEFT_PRANSIS expr (COMMA expr)* RIGHT_PRANSIS)?
+    : invExprStmt                               # inv_expr_stmt
+    | isvoidStmt                                # is_void_stmt
+    | expr MULDIV expr                          # mulDivStmt
+    | expr PLUSMINUS expr                       # plusMinusStmt
+    | expr op expr                              # relOpStmt
+    | notExprStmt                               # not_expr_stmt
+    | LEFT_PRANSIS expr RIGHT_PRANSIS           # bracExprStmt
+    | value                                     # valueStmt
+    | blockStmt                                 # block_stmt
+    | methodCall                                # methodCallStmt
+    | letStmt                                   # let_stmt
+    | whileStmt                                 # while_stmt
+    | ifStmt                                    # if_stmt
+    | newObjStmt                                # new_obj_stmt
+    | caseStmt                                  # case_stmt
+    | featureAccess =  expr (AT TYPE)? DOT ID (LEFT_PRANSIS expr (COMMA expr)* RIGHT_PRANSIS)? # feature_access_stmt
+    | assignmentStmt                            # assignment_stmt
     ;
 
 op
@@ -56,7 +57,7 @@ op
 value
      : LITERAL
      | NUM
-     | ID (ASSIGN_OPERATOR expr)?
+     | ID
      | TRUE
      | FALSE
      ;
@@ -65,12 +66,12 @@ ifStmt : IF expr THEN expr ELSE expr FI;
 
 whileStmt : WHILE expr THEN expr POOL;
 
-letStmt: LET  assignmentStmt+ IN expr;
+letStmt: LET  (varDefinition (COMMA varDefinition )*)* IN expr;
 
-caseStmt : CASE expr OF caseBody ESAC;
-caseBody : (ID COLUN TYPE CASE_ARROW expr)+;
+caseStmt : CASE expr OF caseBody+ ESAC;
+caseBody : ID COLUN TYPE CASE_ARROW expr SEMICOLUN;
 
-assignmentStmt : ID COLUN TYPE ASSIGN_OPERATOR expr;
+assignmentStmt : ID ASSIGN_OPERATOR expr;
 
 blockStmt : LEFT_CURLY (expr SEMICOLUN)+ RIGHT_CURLY;
 
@@ -201,3 +202,4 @@ fragment V
 fragment W
    : [wW]
    ;
+
