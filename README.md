@@ -10,7 +10,7 @@ we will introduce these steps one by one
 let's beigin with lexical analysis
 
 ## 1- Lexical Analyser
-####Lexer purpose: 
+#### Lexer purpose: 
 lexing or tokenization is the process of converting a sequence of characters (such as in a computer program or web page) into a sequence of tokens (strings with an assigned and thus identified meaning). A program that performs lexical analysis may be termed a lexer, tokenizer or scanner.
 
 #### Component Of My Lexer:
