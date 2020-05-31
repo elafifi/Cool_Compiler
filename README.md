@@ -20,10 +20,10 @@ lexing or tokenization is the process of converting a sequence of characters (su
 
 Examples of Lexer grammar:
 * ##### Snapshot 1:
-![snap shot1](src/imgSrc/1.PNG)
+![snap shot1](imgSrc/1.PNG)
 
 * ##### Snapshot 2:
-![snap shot2](../imgSrc/2.PNG)
+![snap shot2](imgSrc/2.PNG)
 
 #### Input Formate:
     any Cool Code
@@ -86,13 +86,13 @@ some_text
 
 Examples for Parser Grammar:
 * ##### Snapshot 1:
-![snap shot1](../imgSrc/parserGrammar1.PNG)
+![snap shot1](imgSrc/parserGrammar1.PNG)
 
 * ##### Snapshot 2:
-![snap shot2](../imgSrc/parserGrammar2.PNG)
+![snap shot2](imgSrc/parserGrammar2.PNG)
 
 * ##### Snapshot 3:
-![snap shot3](../imgSrc/parserGrammar3.PNG)
+![snap shot3](imgSrc/parserGrammar3.PNG)
 
 #### Input: 
 take TokenStream that generated from lexer 
@@ -126,7 +126,7 @@ class Main inherits IO {
 ```
 ### Output:
 
-![Bad_output](../imgSrc/BadOutput.PNG)
+![Bad_output](imgSrc/BadOutput.PNG)
 
 ## 3- Code Generation and Semantic Analysis
 There Three ways to implement this stage: 
@@ -210,7 +210,7 @@ class Main {
 ```
 
 ##### BadOutput:
-![Bad_output](../imgSrc/BadCodeGenerationOutput.PNG)
+![Bad_output](imgSrc/BadCodeGenerationOutput.PNG)
 ## How To Run
 
 ### Compile the file
