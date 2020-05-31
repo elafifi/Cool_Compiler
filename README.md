@@ -1,4 +1,4 @@
-# Cool Compiler 
+#Cool Compiler 
 
 To design any compiler you should do several steps:
 * Lexical Analysis
@@ -9,20 +9,21 @@ To design any compiler you should do several steps:
 we will introduce these steps one by one
 let's beigin with lexical analysis
 
-## 1- Lexical Analyser
-#### Lexer purpose: 
+##1- Lexical Analyser
+####Lexer purpose: 
 lexing or tokenization is the process of converting a sequence of characters (such as in a computer program or web page) into a sequence of tokens (strings with an assigned and thus identified meaning). A program that performs lexical analysis may be termed a lexer, tokenizer or scanner.
 
-#### Component Of My Lexer:
+####Component Of My Lexer:
 * Cool_compiler contain lexer grammar with Antlr 
 * Lexer_IO to manipulate with Lexer_grammar generated class
 * Main Class to test it 
 
 Examples of Lexer grammar:
-* ##### Snapshot 1:
-![snap shot1](imgSrc/1.PNG)
-* ##### Snapshot 2:
-![snap shot2](imgSrc/2.PNG)
+* #####Snapshot 1:
+![snap shot1](../imgSrc/1.PNG)
+
+* #####Snapshot 2:
+![snap shot2](../imgSrc/2.PNG)
 
 #### Input Formate:
     any Cool Code
@@ -85,13 +86,13 @@ some_text
 
 Examples for Parser Grammar:
 * ##### Snapshot 1:
-![snap shot1](imgSrc/parserGrammar1.PNG)
+![snap shot1](../imgSrc/parserGrammar1.PNG)
 
 * ##### Snapshot 2:
-![snap shot2](imgSrc/parserGrammar2.PNG)
+![snap shot2](../imgSrc/parserGrammar2.PNG)
 
 * ##### Snapshot 3:
-![snap shot3](imgSrc/parserGrammar3.PNG)
+![snap shot3](../imgSrc/parserGrammar3.PNG)
 
 #### Input: 
 take TokenStream that generated from lexer 
@@ -125,8 +126,91 @@ class Main inherits IO {
 ```
 ### Output:
 
-![Bad_output](imgSrc/BadOutput.PNG)
+![Bad_output](../imgSrc/BadOutput.PNG)
 
+## 3- Code Generation and Semantic Analysis
+There Three ways to implement this stage: 
+1. Listeners
+2. Visitors
+3. Translators
+
+but I use third method to achieve isolation and reliability in my implementation.
+
+all Components to implement CodeGeneration exists in translation Folder
+
+#### Examples: 
+##### GoodInput:
+```
+class Main {
+  a: Int;
+  add(p1Name: Int): String {
+       {
+          while 3<2 then a <- 5*3+4*2 pool;
+       }
+      };
+  };    
+```
+
+##### GoodOutput:
+```
+--=========================
+---------> ClassDefinitionStmt_Start <-----------
+ --=========================
+
+Main: 
+ --=========================
+--> MethodDefinitionStmt_Start <--
+ --=========================
+
+add: 
+ --=========================
+---------> BlockStmt_Start <-----------
+ --=========================
+
+ --=========================
+---------> WhileStmt_Start <-----------
+ --=========================
+
+L٠:
+t٠ := 3 < 2
+IFZ t٠ GOTO L١
+t١ := 5 * 3
+t٢ := 4 * 2
+t٣ := t١ + t٢
+a := t٣
+GOTO L٠
+L١:
+ --=========================
+---------> WhileStmt_End <-----------
+ --=========================
+
+ --=========================
+---------> BlockStmt_End <-----------
+ --=========================
+
+ --=========================
+--> MethodDefinitionStmt_End <--
+ --=========================
+
+ --=========================
+---------> ClassDefinitionStmt_End <-----------
+ --=========================
+
+
+```
+
+##### BadInput:
+```
+class Main {
+  a: Int;
+  add(p1Name: Int): String {
+          case a of b:Int => a <- 5;b:Int => b <- 5;esac
+      };
+  };
+```
+
+##### BadOutput:
+![Bad_output](../imgSrc/BadCodeGenerationOutput.PNG)
 ## How To Run
 
 ### Compile the file
